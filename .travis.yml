@@ -9,4 +9,4 @@ service: docker
 script:
 - docker info 
 - sudo apt-get install -y locate
-- find / -name docker.service
+- cat /usr/lib/systemd/system/docker.service
