@@ -11,3 +11,12 @@ script:
 - sudo apt-get install -y locate
 - cat /usr/lib/systemd/system/docker.service
 - sed -i '14s/.*/ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --exec-opt native.cgroupdriver=systemd/' /usr/lib/systemd/system/docker.service
+- cat /usr/lib/systemd/system/docker.service
+- systemctl status docker.service
+- systemctl restart docker
+- systemctl status docker.service
+- sed -i '14s/.*/ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock' /usr/lib/systemd/system/docker.service
+- systemctl status docker.service
+- systemctl restart docker
+- systemctl status docker.service
+- docker imfo 
