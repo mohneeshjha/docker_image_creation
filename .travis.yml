@@ -8,3 +8,4 @@ service: docker
 
 script:
 - docker info 
+- locate docker.service
