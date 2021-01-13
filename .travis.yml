@@ -7,6 +7,4 @@ virt: vm
 service: docker
 
 script:
-- docker build -t concourse_buildroot:curl-arm64 .
-- docker login --username=mohneesh97979 --email=mohneesh9797@gmail.com
-- docker push mohneesh9797/concourse_buildroot
+- docker info 
